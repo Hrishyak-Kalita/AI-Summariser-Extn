@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "AI_Summary",
   "version": "1.0",
-  "permissions": ["scripting", "activeTab", "storage"],
+  "permissions": ["scripting", "activeTab", "storage", "tabs"],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self';  object-src 'self';"
+  },
+
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
